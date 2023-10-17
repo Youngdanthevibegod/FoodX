@@ -1,6 +1,7 @@
 # FoodX
-These are the steps I took
-to do exploratory data analysis on Jupiter Notebook.
+These are the steps I took to do exploratory 
+data analysis on Jupiter Notebook.
+(Attached is also a file called FoodX where I did my coding.=)
 
 %pip install pyodide-http
 import pyodide_http
@@ -49,6 +50,6 @@ Implications of data collection, storage, and data biases
    
 5. Technical implications of these factors are data security and data retention. It is very important that the data is stored securely to avoid access, breaches, and cyberattacks. Also, it is crucial to know data retention policies to avoid storing unnecessary data for extended periods. This can help reduce attacks and potential security risks.
 
-While building a model to predict a customer's order from their available information, I came upon a wall. I tried everything from all the resources that I used but to no avail, I was not able to complete my model and get to the prediction part. I am truly disappointed that I couldn't get to that part but there's only so much that I can do and know.
+For my model, I chose the Linear Regression model. I chose this model because Linear regression is a statistical modeling technique used to describe a continuous response variable as a linear function of one or more predictor variables. Because linear regression models are simple to interpret and easy to train, they are often the first models to try when working with a new data set. While building a Linear Regression model to predict a customer's order from their available information, I came upon a huge wall. I tried searching for a solution from all the resources that I used but to no avail, I was not able to complete my model and get to the prediction part. I am truly disappointed that I couldn't get to that part but there's only so much that I can do and know.
 
 However, I think that given the work required to bring a solution like this to maturity and its performance, the consideration I would make to determine if this is a suitable course of action is to see how well the AI is able to keep predicting a customer's order. Because that determines the outcome of FoodX's future.
