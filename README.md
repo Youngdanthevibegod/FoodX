@@ -1,18 +1,54 @@
 # FoodX
+These are the steps I took
+to do exploratory data analysis on Jupiter Notebook.
+
+%pip install pyodide-http
+import pyodide_http
+pyodide_http.patch_all()
+import matplotlib
+import pandas
+
+import pandas as pd
+import numpy as np
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error, r2_score
+import matplotlib.pyplot as plt
+%matplotlib inline
+
+data = pd.read_csv('Downloads/XTern 2024 Artificial Intelegence Data Set - Xtern_TrainData.csv')
+data.head()
+
+X = np.array(data['Time']).reshape(1,-1)                 
+y = np.array(data['Order'])
+
+plt.scatter(X,y)
+
+from sklearn.model_selection import train_test_split
+
+X_train, X_test, y_train, y_test = train_test_split(X,y,test_size = 0.25, random_state=0)
+
+lr =LinearRegression()
+
+lr.fit(X_train,y_train)
+
 
 Visualization and Findings
-* I used a graph to look at the data in a grpahical perspective.
-* I was able to find out from the line graphs and bar graphs that Indiana University is the domiant school in the data. Also Fried Catfish Basket was orded the moset.
+* I used a graph to look at the data from a graphical perspective.
+* I was able to find out from the line graphs and bar graphs that Indiana University is the dominant school in the data. Also, the Fried Catfish Basket was ordered the most.
 
 Business use cases for the data
-*  This data can also be used to determine which oe how many colleges is more likely to do online orders. Then FoodX can target those colleges to bring in more income.
-*   This data can also be used to identify what order do college students like the most. The favorite food on the menu is more likely to attract more customers back to FoodX. Giving FoodX longterm customers.
+*  This data can also be used to determine which or how many colleges are more likely to do online orders. Then FoodX can target those colleges to bring in more income.
+*   This data can also be used to identify what order college students like the most. The favorite food on the menu is more likely to attract more customers back to FoodX. Giving FoodX long-term customers.
 
 
 Implications of data collection, storage, and data biases
 
-1. Ethical implications of these factors are privacy concerns and trasnparency. It's important that the data collection of the college students have a repsected privacy and adhere to data protection regulations. They must also be informed of what will happen to the data collected, how it is stored, and it's use.
+1. The ethical implications of these factors are privacy concerns and transparency. It's important that the data collection of college students respect privacy and adhere to data protection regulations. They must also be informed of what will happen to the data collected, how it is stored, and its use.
    
-3. Business outcome implications of these factors are the quality of the data and bias data. Inaccurate data can lead to incoreect analysis and decisions that then affects the businesses outcomes. Also, biased data can lead to unfair treatment of a certain group or population.
+3. Business outcome implications of these factors are the data quality and biased data. Inaccurate data can lead to incorrect analysis and decisions that affect business outcomes. Also, biased data can lead to unfair treatment of a certain group or population.
    
-5. Technical implications of these factors are data security and data retnetion. It is very importnat that the data is stored securely to avoid access, breaches, and cyberattacks. Also, it is crucial to know data retention policies to avoid storing unncesssary data for extented periods. This can help reducing attacks and potential secourty risks.
+5. Technical implications of these factors are data security and data retention. It is very important that the data is stored securely to avoid access, breaches, and cyberattacks. Also, it is crucial to know data retention policies to avoid storing unnecessary data for extended periods. This can help reduce attacks and potential security risks.
+
+While building a model to predict a customer's order from their available information, I came upon a wall. I tried everything from all the resources that I used but to no avail, I was not able to complete my model and get to the prediction part. I am truly disappointed that I couldn't get to that part but there's only so much that I can do and know.
+
+However, I think that given the work required to bring a solution like this to maturity and its performance, the consideration I would make to determine if this is a suitable course of action is to see how well the AI is able to keep predicting a customer's order. Because that determines the outcome of FoodX's future.
